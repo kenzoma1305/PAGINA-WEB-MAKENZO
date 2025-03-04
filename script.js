@@ -1,9 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Página de Makenzo Houshi cargada");
+    const pagePath = window.location.pathname;
 
-    // Slider
+    if (pagePath.includes("index.html") || pagePath === "/") {
+        console.log("Página de inicio de Makenzo Houshi cargada");
+    } else if (pagePath.includes("conciertos.html")) {
+        console.log("Página de conciertos de Makenzo Houshi cargada");
+        setupConcertSlider();
+    } else if (pagePath.includes("catalogo.html")) {
+        console.log("Página de catálogo musical de Makenzo Houshi cargada");
+    } else if (pagePath.includes("biografia.html")) {
+        console.log("Página de biografía de Makenzo Houshi cargada");
+    } else if (pagePath.includes("videos.html")) {
+        console.log("Página de videoclips de Makenzo Houshi cargada");
+        setupPhotoSlider();
+    }
+});
+
+function setupConcertSlider() {
     let index = 0;
-    const slides = document.querySelectorAll(".slide");
+    const slides = document.querySelectorAll(".slider .slide");
     const slideCount = slides.length;
     const slider = document.querySelector(".slider");
     const prevButton = document.querySelector(".slider-prev");
@@ -27,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (slideCount > 0) {
         showSlide(index);
-        setInterval(nextSlide, 4000); // Cambia el slide cada 4 segundos
+        setInterval(nextSlide, 4000);
 
         prevButton.addEventListener("click", () => {
             prevSlide();
@@ -37,4 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
             nextSlide();
         });
     }
-});
+}
+
+function setupPhotoSlider() {
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    window.plusSlides = function(n) {
+        showSlides(slideIndex += n);
+    };
+
+    function showSlides(n) {
+        let i;
+        let slides = document.querySelectorAll(".photo-slider .slide");
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+}
