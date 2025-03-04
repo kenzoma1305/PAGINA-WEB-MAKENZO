@@ -172,7 +172,7 @@ footer {
 }
 
 .nav-button:hover {
-    background-color: #FFB300;
+    background-color: #00ffff;
     transform: scale(1.05);
 }
 
@@ -398,12 +398,24 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.video-container iframe {
+.video-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-link iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.video-link:hover {
+    opacity: 0.8; /* Efecto hover */
 }
 
 .youtube-link {
