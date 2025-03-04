@@ -55,10 +55,10 @@ nav a:hover {
 
 @keyframes neonGlow {
     from {
-        text-shadow: 0 0 5px #FF9800, 0 0 10px #FF9800, 0 0 15px #FF9800;
+        text-shadow: 0 0 5px #cc06bb, 0 0 10px #cc06bb, 0 0 15px #cc06bb;
     }
     to {
-        text-shadow: 0 0 10px #975c02, 0 0 20px #975c02, 0 0 30px #975c02;
+        text-shadow: 0 0 10px #974a02, 0 0 20px #975c02, 0 0 30px #975c02;
     }
 }
 
