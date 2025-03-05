@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makenzo Houshi - Contacto</title>
+    <title>Contacto - Makenzo Houshi</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="TU_INTEGRIDAD_HASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+
     <header>
         <div class="header-content">
             <h1 class="neon-text">Makenzo Houshi</h1>
@@ -20,11 +22,46 @@
                     <li><a href="biografia.html" class="nav-button">Biografía</a></li>
                     <li><a href="catalogo.html" class="nav-button">Catálogo Musical</a></li>
                     <li><a href="videos.html" class="nav-button">Contenido Gráfico</a></li>
-                    <li><a href="contacto.html" class="nav-button">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
+
+    <section class="contact-container">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o propuesta? Escríbeme y te responderé lo antes posible.</p>
+        
+        <form id="contact-form" class="contact-form">
+            <label for="name"><i class="fas fa-user"></i> Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            
+            <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            
+            <label for="message"><i class="fas fa-comment"></i> Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        
+        <p id="form-message" class="hidden">¡Gracias por tu mensaje! Te responderemos lo antes posible.</p>
+
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> Teléfono: +34 612 54 25 15</p>
+            <p><i class="fas fa-map-marker-alt"></i> Ubicación: Lleida, España</p>
+            <p><i class="fas fa-clock"></i> Horario: Lunes a Viernes, 9:00 - 18:00</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://x.com/makenzohoushi" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://shorturl.at/sXppX" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://shorturl.at/wZQqo" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://shorturl.at/gvDrZ" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+        <p>&copy; 2025 Kenzoma Records. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>

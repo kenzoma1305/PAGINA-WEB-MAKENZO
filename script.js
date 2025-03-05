@@ -73,3 +73,45 @@ function setupPhotoSlider() {
         slides[slideIndex - 1].style.display = "block";
     }
 }
+
+/*Para el formulario de contacto*/
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contact-form");
+    const formMessage = document.getElementById("form-message");
+
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Obtener valores del formulario
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Validar los campos
+        if (name === "" || email === "" || message === "") {
+            showMessage("Por favor, completa todos los campos.", "error");
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            showMessage("Por favor, ingresa un correo válido.", "error");
+            return;
+        }
+        // Función para validar email
+    function isValidEmail(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+
+    // Función para mostrar mensajes de estado
+    function showMessage(text, type) {
+        formMessage.textContent = text;
+        formMessage.className = type === "error" ? "form-message error" : "form-message success";
+        formMessage.style.display = "block";
+
+        setTimeout(() => {
+            formMessage.style.display = "none";
+        }, 3000);
+    }
+    });
+});
