@@ -1,3 +1,4 @@
+/* Estilos generales para el cuerpo de la página */
 body {
     font-family: 'Bebas Neue', sans-serif;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Estilos para el encabezado */
 header {
     background: linear-gradient(135deg, rgba(30, 58, 95, 0.8), rgba(20, 35, 60, 0.8)); /* Degradado sutil */
     padding: 1.5rem 2rem;
@@ -24,6 +26,7 @@ header {
     margin: 0 auto;
 }
 
+/* Estilos para la navegación */
 nav ul {
     list-style: none;
     display: flex;
@@ -46,6 +49,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+/* Estilos para el texto con efecto neón */
 .neon-text {
     font-size: 2.5rem;
     color: #FF9800;
@@ -55,13 +59,14 @@ nav a:hover {
 
 @keyframes neonGlow {
     from {
-        text-shadow: 0 0 5px #cc06bb, 0 0 10px #cc06bb, 0 0 15px #cc06bb;
+        text-shadow: 0 0 5px #186ff1, 0 0 10px #186ff1, 0 0 15px #186ff1;
     }
     to {
         text-shadow: 0 0 10px #974a02, 0 0 20px #975c02, 0 0 30px #975c02;
     }
 }
 
+/* Estilos para las secciones */
 section {
     padding: 3rem 2rem;
     text-align: center;
@@ -75,6 +80,7 @@ section h2 {
     color: #FF9800;
 }
 
+/* Estilos para el contenedor del slider */
 .slider-container {
     position: relative;
     width: 90%;
@@ -101,6 +107,7 @@ section h2 {
     border-radius: 15px;
 }
 
+/* Estilos para los botones de navegación del slider */
 .slider-prev, .slider-next {
     position: absolute;
     top: 50%;
@@ -122,6 +129,7 @@ section h2 {
     right: 0;
 }
 
+/* Estilos para las cuadrículas de videos y fotos */
 .video-grid, .photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -139,6 +147,7 @@ section h2 {
     transform: scale(1.05);
 }
 
+/* Estilos para el pie de página */
 footer {
     text-align: center;
     padding: 2rem 0;
@@ -162,6 +171,7 @@ footer {
     color: #FF9800; /* Color naranja al pasar el ratón */
 }
 
+/* Estilos para los botones de navegación */
 .nav-button {
     background-color: #FF9800;
     color: #121212;
@@ -176,6 +186,7 @@ footer {
     transform: scale(1.05);
 }
 
+/* Estilos para la sección hero */
 .hero {
     background-image: url('INICIO/imagenprincipal1.JPG'); /* Imagen de fondo */
     background-size: cover;
@@ -200,6 +211,7 @@ footer {
     margin-bottom: 2rem;
 }
 
+/* Estilos para los botones de llamada a la acción */
 .cta-button {
     background-color: #FF9800;
     color: #121212;
@@ -312,7 +324,7 @@ footer {
     }
 }
 
-/*Para el catálogo de canciones*/
+/* Para el catálogo de canciones */
 .music-catalog h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -387,7 +399,7 @@ footer {
     text-align: center;
 }
 
-/* Para el catálogo de videoclips e imagenes */
+/* Para el catálogo de videoclips e imágenes */
 .video-container {
     position: relative;
     width: 100%;
@@ -431,12 +443,13 @@ footer {
     color: #FFB300;
 }
 
-/* Para la biografia */
+/* Para la biografía */
 .bio {
     background-image: url('BACKGROUND/background bio.jpg');
     background-size: cover;
     background-position: center;
 }
+
 .bio-content {
     max-width: 800px;
     margin: 2rem auto;
@@ -457,6 +470,7 @@ footer {
     margin-bottom: 15px;
 }
 
+/* Estilos para el contenedor de contacto */
 .contact-container {
     max-width: 800px;
     margin: 3rem auto;
