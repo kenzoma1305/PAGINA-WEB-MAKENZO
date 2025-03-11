@@ -10,12 +10,13 @@ body {
 
 /* Estilos para el encabezado */
 header {
-    background: linear-gradient(135deg, rgba(30, 58, 95, 0.8), rgba(20, 35, 60, 0.8)); /* Degradado sutil */
+    background: linear-gradient(135deg, #1e3a5f, #14233c);
     padding: 1.5rem 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: sticky;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: sticky; /* Se mantiene visible al hacer scroll */
     top: 0;
     z-index: 100;
+    transition: all 0.3s ease-in-out;
 }
 
 .header-content {
@@ -44,25 +45,26 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #FF9800; /* Naranja llamativo */
+    background: #FF9800;
     color: #121212;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.8);
 }
 
 /* Estilos para el texto con efecto neón */
 .neon-text {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #FF9800;
-    text-shadow: 0 0 10px #FF9800, 0 0 20px #FF9800, 0 0 30px #FF9800;
-    animation: neonGlow 2s infinite alternate;
+    text-shadow: 0 0 10px #FF9800, 0 0 20px #FF6F00, 0 0 30px #FF6F00;
+    animation: neonGlow 1.5s infinite alternate;
 }
 
 @keyframes neonGlow {
     from {
-        text-shadow: 0 0 5px #186ff1, 0 0 10px #186ff1, 0 0 15px #186ff1;
+        text-shadow: 0 0 5px #FF9800, 0 0 10px #FF6F00;
     }
     to {
-        text-shadow: 0 0 10px #974a02, 0 0 20px #975c02, 0 0 30px #975c02;
+        text-shadow: 0 0 15px #FFB300, 0 0 30px #FFB300;
     }
 }
 
@@ -87,8 +89,8 @@ section h2 {
     max-width: 800px;
     margin: 2rem auto;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .slider {
@@ -144,7 +146,8 @@ section h2 {
 }
 
 .video-grid video:hover, .photo-grid img:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.7);
 }
 
 /* Estilos para el pie de página */
@@ -162,28 +165,37 @@ footer {
 
 .social-icons a {
     color: #b3d9ff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 0 1rem;
-    transition: color 0.3s;
+    transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #FF9800; /* Color naranja al pasar el ratón */
+    transform: scale(1.2);
+    color: #FF9800;
 }
 
 /* Estilos para los botones de navegación */
 .nav-button {
-    background-color: #FF9800;
+    background: linear-gradient(45deg, #FF9800, #FF6F00);
     color: #121212;
     padding: 1rem 2rem;
     border-radius: 30px;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-button i {
+    font-size: 1.2rem;
 }
 
 .nav-button:hover {
-    background-color: #00ffff;
-    transform: scale(1.05);
+    background: linear-gradient(45deg, #FFB300, #FF9800);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.8);
 }
 
 /* Estilos para la sección hero */
@@ -520,12 +532,10 @@ footer {
     color: #121212;
     padding: 1.2rem;
     border-radius: 30px;
-    border: none;
     font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.4);
 }
 
 .contact-form button:hover {
@@ -573,3 +583,27 @@ footer {
         font-size: 2.3rem;
     }
 }
+
+/* Animación de fondo dinámico para música */
+@keyframes movingBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#musica {
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: movingBackground 10s ease infinite;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+}
+
+#musica h2 {
+    font-size: 3rem;
+    color: #FF9800;
+    text-shadow: 0 0 10px rgba(255, 152, 0, 0.8);
+}
+
