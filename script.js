@@ -115,3 +115,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     });
 });
+
+// Script para el funcionamiento del slider
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.slider-prev');
+    const nextButton = document.querySelector('.slider-next');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+        showSlide(currentSlide);
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+        showSlide(currentSlide);
+    });
+
+    showSlide(currentSlide);
+});

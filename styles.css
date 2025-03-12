@@ -304,6 +304,21 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+}
+
 /* Para pantallas aún más pequeñas */
 @media (max-width: 480px) {
     .neon-text {
